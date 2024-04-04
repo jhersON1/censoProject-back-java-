@@ -15,16 +15,12 @@ public class CensoUser {
     public String lastName;
     public String email;
     public String password;
-    @ManyToOne(optional = true)
-    @JoinColumn(name = "creado_por")
-    public CensoUser creadoPor;
+    public String carnet;
+    public String administrator;
     @Enumerated(EnumType.STRING)
-    public TipoRol roles;
-
-
+    public TipoRol role;
     public enum TipoRol {
-        ADMINISTRADOR,
-        CENSADOR,
-        USUARIO
+        ADMINISTRATOR,
+        CENSUS_TAKER
     }
 }
