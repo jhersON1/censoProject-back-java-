@@ -29,6 +29,7 @@ public class CensoUser implements UserDetails {
     private String password;
     @Enumerated(EnumType.STRING)
     private TypeRole role;
+    private String adminCode;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
